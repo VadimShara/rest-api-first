@@ -1,0 +1,10 @@
+PUT http://localhost:1234/users/2
+Content-Type: application/json
+
+{}
+
+> {%
+client.test("Request executed successfully", function(){
+    client.assert(response.status === 204, "Response status is not 204"
+});
+%}
